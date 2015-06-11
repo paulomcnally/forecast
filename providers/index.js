@@ -1,3 +1,3 @@
 module.exports = {
-    'forecast.io': require('./forecast.io')
+  'forecast.io': require('./forecast.io')
 };
