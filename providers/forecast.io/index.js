@@ -11,6 +11,14 @@ ForecastIO.prototype.query = function(apiParams, callback) {
   }
 
   var units = this.options.units.charAt(0).toLowerCase() === 'c' ? '?units=si' : '';
+
+  if (this.options.lang) {
+    if (units) {
+      units += '&';
+    }
+    units += 'lang=' + this.options.lang;
+  }
+
   this.client.get(apiParams.join(',') + units, callback);
 };
 
